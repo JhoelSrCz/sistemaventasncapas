@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.Modelos
 {
-    public class DetalleVenta
+    public class Detalleing
     {
-        public int IdDetalleVenta { get; set; }
-        public int IdVenta { get; set; }
+        public int IdDetalleing { get; set; }
+        public int IdIngreso { get; set; }
         public int IdProducto { get; set; }
         public int Cantidad { get; set; }
+        public DateTime FechaVenc { get; set; }
+        public decimal PrecioCosto { get; set; }
         public decimal PrecioVenta { get; set; }
         public decimal SubTotal { get; set; }
         public string Estado { get; set; }

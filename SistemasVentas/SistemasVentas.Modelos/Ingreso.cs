@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.Modelos
 {
-    internal class Ingreso
+    public class Ingreso
     {
-        public int IdCliente { get; set; }
+        public int IdIngreso { get; set; }
         public int IdProveedor { get; set; }
         public DateTime FechaIngreso { get; set; }
         public decimal Total { get; set; }
