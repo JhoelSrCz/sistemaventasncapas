@@ -20,7 +20,7 @@ namespace SistemaVentas.VISTA.IngresoVistas
         IngresoBss bss = new IngresoBss();
         private void IngresoListarVistas_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarIngrsoBss();
+            dataGridView1.DataSource = bss.ListarIngresoBss();
         }
     }
 }
