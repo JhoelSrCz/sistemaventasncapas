@@ -80,6 +80,7 @@
             button3.TabIndex = 4;
             button3.Text = "SELECCIONAR";
             button3.UseVisualStyleBackColor = true;
+            button3.Visible = false;
             button3.Click += button3_Click;
             // 
             // txtRol
@@ -88,6 +89,7 @@
             txtRol.Name = "txtRol";
             txtRol.Size = new Size(312, 27);
             txtRol.TabIndex = 6;
+            txtRol.Visible = false;
             // 
             // label2
             // 
@@ -97,6 +99,7 @@
             label2.Size = new Size(36, 20);
             label2.TabIndex = 5;
             label2.Text = "ROL";
+            label2.Visible = false;
             // 
             // RolInsertarVistas
             // 

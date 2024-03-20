@@ -35,8 +35,10 @@ namespace SistemasVentas.DAL
         }
         public void EditarRolDal(Rol rol)
         {
-            string consulta = "update rol set nombre='" + rol.Nombre + "'," +
-                                        "where idrol=" + rol.IdRol;
+            string consulta = "update rol set " +
+                      "nombre = '" + rol.Nombre + "', " +
+                      "estado = '" + rol.Estado + "' " +
+                      "where idrol = " + rol.IdRol;
 
             conexion.Ejecutar(consulta);
         }
