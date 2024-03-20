@@ -21,14 +21,14 @@ namespace SistemaVentas.VISTA.PersonasVistas
         PersonaBss bss = new PersonaBss();
         private void button1_Click(object sender, EventArgs e)
         {
-            Persona p = new Persona();
-            p.Nombre = txtNombre.Text;
-            p.Apellido = txtApellido.Text;
-            p.Telefono = txtTelefono.Text;
-            p.Ci = txtCi.Text;
-            p.Correo = txtCorreo.Text;
+            Persona persona = new Persona();
+            persona.Nombre = txtNombre.Text;
+            persona.Apellido = txtApellido.Text;
+            persona.Telefono = txtTelefono.Text;
+            persona.Ci = txtCi.Text;
+            persona.Correo = txtCorreo.Text;
 
-            bss.InsertarPersonaBss(p);
+            bss.InsertarPersonaBss(persona);
 
             MessageBox.Show("Se guardo correctamente la persona");
         }

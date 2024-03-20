@@ -10,6 +10,7 @@ namespace SistemasVentas.DAL
 {
     public class UsuarioDal
     {
+        public UsuarioDal() { }
         public DataTable ListarUsuarioDal()
         {
             string consulta = "select * from usuario";
@@ -18,11 +19,10 @@ namespace SistemasVentas.DAL
         }
         public void InsertarUsuarioDal(Usuario usuario)
         {
-            string consulta = "insert into usuario values(" + usuario.IdPersona + "," +
-                                                            "'" + usuario.NombreUser + "'," +
-                                                            "'" + usuario.Contraseña + "'," +
-                                                            "'" + usuario.FechaReg + "'," +
-                                                            "'Activo')";
+            string consulta = "insert into usuario values(" + usuario.IdPersona +
+                                                            "','" + usuario.NombreUser +
+                                                            "','" + usuario.Contraseña + 
+                                                            "','" + usuario.FechaReg + "')";
             conexion.Ejecutar(consulta);
         }
     }

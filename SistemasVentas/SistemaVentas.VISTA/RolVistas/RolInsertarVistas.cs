@@ -18,6 +18,7 @@ namespace SistemaVentas.VISTA.RolVistas
         {
             InitializeComponent();
         }
+        public static int IdRolSeleccionado = 0;
         RolBss bss = new RolBss();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -27,6 +28,16 @@ namespace SistemaVentas.VISTA.RolVistas
             bss.InsertarRolBss(rol);
 
             MessageBox.Show("Se guardo correctamente");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RolListarVistas fr = new RolListarVistas();
+            if(fr.ShowDialog() == DialogResult.OK)
+            {
+                Rol rol = bss.ObtenerIdBss(IdRolSeleccionado);
+                txtRol.Text = rol.Nombre + " " + rol.IdRol;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SistemasVentas.DAL
 
         public static string CONECTAR
         {
-            get { return @"Data Source=DESKTOP-A1HU1PB\SQLEXPRESS; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
+            get { return @"Data Source=DESKTOP-A1HU1PB\SQLEXPRESS; Initial Catalog=TiendaBD; Integrated Security=True; TrustServerCertificate=true;"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
         public static DataSet EjecutarDataSet(string consulta)
