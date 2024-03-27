@@ -55,6 +55,7 @@
             // 
             // button1
             // 
+            button1.DialogResult = DialogResult.OK;
             button1.Location = new Point(207, 203);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
@@ -65,6 +66,7 @@
             // 
             // button2
             // 
+            button2.DialogResult = DialogResult.Cancel;
             button2.Location = new Point(380, 203);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
@@ -96,9 +98,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(120, 70);
             label2.Name = "label2";
-            label2.Size = new Size(36, 20);
+            label2.Size = new Size(51, 20);
             label2.TabIndex = 5;
-            label2.Text = "ROL";
+            label2.Text = "IDROL";
             label2.Visible = false;
             // 
             // RolInsertarVistas
