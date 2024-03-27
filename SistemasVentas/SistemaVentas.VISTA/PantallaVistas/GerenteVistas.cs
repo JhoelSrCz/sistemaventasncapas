@@ -16,5 +16,11 @@ namespace SistemaVentas.VISTA.PantallaVistas
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UsuarioVistas user = new UsuarioVistas();
+            user.Show();
+        }
     }
 }

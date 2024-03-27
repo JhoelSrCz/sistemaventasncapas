@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaIngresarVistas));
-            textBox2 = new TextBox();
+            txtContraseña = new TextBox();
             pictureBox4 = new PictureBox();
-            textBox1 = new TextBox();
+            txtUsuario = new TextBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             label2 = new Label();
@@ -50,15 +50,15 @@
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
-            // textBox2
+            // txtContraseña
             // 
-            textBox2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(474, 270);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(278, 37);
-            textBox2.TabIndex = 18;
+            txtContraseña.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseña.Location = new Point(474, 270);
+            txtContraseña.Multiline = true;
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
+            txtContraseña.Size = new Size(278, 37);
+            txtContraseña.TabIndex = 18;
             // 
             // pictureBox4
             // 
@@ -70,15 +70,15 @@
             pictureBox4.TabIndex = 17;
             pictureBox4.TabStop = false;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(474, 197);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 37);
-            textBox1.TabIndex = 16;
+            txtUsuario.BackColor = Color.White;
+            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.Location = new Point(474, 197);
+            txtUsuario.Multiline = true;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(278, 37);
+            txtUsuario.TabIndex = 16;
             // 
             // pictureBox3
             // 
@@ -153,6 +153,7 @@
             // button1
             // 
             button1.BackColor = Color.Blue;
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(458, 359);
             button1.Name = "button1";
@@ -160,10 +161,12 @@
             button1.TabIndex = 22;
             button1.Text = "INGRESAR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.Red;
+            button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.Location = new Point(618, 359);
             button2.Name = "button2";
@@ -171,6 +174,7 @@
             button2.TabIndex = 23;
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // PantallaIngresarVistas
             // 
@@ -181,9 +185,9 @@
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtContraseña);
             Controls.Add(pictureBox4);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsuario);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
@@ -201,9 +205,9 @@
         }
 
         #endregion
-        private TextBox textBox2;
+        private TextBox txtContraseña;
         private PictureBox pictureBox4;
-        private TextBox textBox1;
+        private TextBox txtUsuario;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Label label2;
