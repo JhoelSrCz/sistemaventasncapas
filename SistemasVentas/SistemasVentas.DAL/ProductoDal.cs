@@ -12,7 +12,12 @@ namespace SistemasVentas.DAL
     {
         public DataTable ListarProductoDal()
         {
-            string consulta = "select * from producto";
+            string consulta = "SELECT PRODUCTO.IDPRODUCTO, TIPOPROD.NOMBRE AS TIPO_PRODUCTO, " +
+                                "MARCA.NOMBRE AS MARCA, PRODUCTO.NOMBRE AS PRODUCTO, PRODUCTO.CODIGOBARRA, " +
+                                "PRODUCTO.UNIDAD, PRODUCTO.DESCRIPCION, PRODUCTO.ESTADO\r\n" +
+                                "FROM     PRODUCTO INNER JOIN\r\n                  " +
+                                "TIPOPROD ON PRODUCTO.IDTIPOPROD = TIPOPROD.IDTIPOPROD INNER JOIN\r\n" +
+                                "MARCA ON PRODUCTO.IDMARCA = MARCA.IDMARCA";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }

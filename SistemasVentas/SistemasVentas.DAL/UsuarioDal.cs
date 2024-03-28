@@ -13,7 +13,10 @@ namespace SistemasVentas.DAL
         public UsuarioDal() { }
         public DataTable ListarUsuarioDal()
         {
-            string consulta = "select * from usuario";
+            string consulta = "SELECT USUARIO.IDUSUARIO, (PERSONA.NOMBRE +' '+ PERSONA.APELLIDO)NOMBRE_COMPLETO, " +
+                                    "USUARIO.NOMBREUSER, USUARIO.CONTRASEÑA, USUARIO.FECHAREG AS FECHA_DE_REGISTRO\r\n" +
+                                    "FROM     PERSONA INNER JOIN\r\n                  " +
+                                    "USUARIO ON PERSONA.IDPERSONA = USUARIO.IDPERSONA";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }

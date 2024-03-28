@@ -12,7 +12,12 @@ namespace SistemasVentas.DAL
     {
         public DataTable ListarUsuarioRolDal()
         {
-            string consulta = "select * from usuariorol";
+            string consulta = "SELECT USUARIOROL.IDUSUARIOROL, (USUARIO.NOMBREUSER +'  /  '+ " +
+                                "USUARIO.CONTRASEÑA)USUARIO_Y_CONTRASEÑA, ROL.NOMBRE AS ROL, " +
+                                "USUARIOROL.FECHAASIGNA AS FECHA_ASIGNADA, USUARIOROL.ESTADO\r\n" +
+                                "FROM     USUARIOROL INNER JOIN\r\n                 " +
+                                "USUARIO ON USUARIOROL.IDUSUARIO = USUARIO.IDUSUARIO INNER JOIN\r\n" +
+                                "ROL ON USUARIOROL.IDROL = ROL.IDROL";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }

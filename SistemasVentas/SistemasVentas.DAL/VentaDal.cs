@@ -12,7 +12,11 @@ namespace SistemasVentas.DAL
     {
         public DataTable ListarVentaDal()
         {
-            string consulta = "select * from venta";
+            string consulta = "SELECT VENTA.IDVENTA, CLIENTE.TIPOCLIENTE, USUARIO.NOMBREUSER, " +
+                                "VENTA.FECHA, VENTA.TOTAL, VENTA.ESTADO\r\n" +
+                                "FROM     VENTA INNER JOIN\r\n                  " +
+                                "CLIENTE ON VENTA.IDCLIENTE = CLIENTE.IDCLIENTE INNER JOIN\r\n                  " +
+                                "USUARIO ON VENTA.IDVENDEDOR = USUARIO.IDUSUARIO";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }

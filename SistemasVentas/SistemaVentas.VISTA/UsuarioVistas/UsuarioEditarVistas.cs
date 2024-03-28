@@ -28,17 +28,17 @@ namespace SistemaVentas.VISTA.UsuarioVistas
         private void UsuarioEditarVistas_Load(object sender, EventArgs e)
         {
             p = bss.ObtenerUsuarioIdBss(idx);
-            txtIdPers.Text = p.IdPersona.ToString();
-            txtnombreuser.Text = p.NombreUser;
-            txtcontrase.Text = p.Contraseña;
+            txtIdPersona.Text = p.IdPersona.ToString();
+            txtNombreUser.Text = p.NombreUser;
+            txtContraseña.Text = p.Contraseña;
             dateTimePicker1.Value = p.FechaReg;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             p.IdPersona = IdPersonaSeleccionada;
-            p.NombreUser = txtnombreuser.Text;
-            p.Contraseña = txtcontrase.Text;
+            p.NombreUser = txtNombreUser.Text;
+            p.Contraseña = txtContraseña.Text;
             p.FechaReg = dateTimePicker1.Value;
             bss.EditarUsuarioBss(p);
             MessageBox.Show("Datos Actualizados");
@@ -52,7 +52,7 @@ namespace SistemaVentas.VISTA.UsuarioVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Persona persona = bssper.ObtenerIdBss(IdPersonaSeleccionada);
-                txtnombreuser.Text = persona.Nombre + " " + persona.Apellido;
+                txtNombreUser.Text = persona.Nombre + " " + persona.Apellido;
             }
         }
     }
